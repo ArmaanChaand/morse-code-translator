@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.PARENT_ELEMENT{
+    @apply w-screen h-screen bg-[#121212] text-white flex flex-col items-center justify-start font-future text-base
+}
+.mainHeading{
+  @apply text-center text-4xl leading-6 mt-5 mb-3
+}
+.mainHeading > span {
+  @apply text-xl
+}
+.PARENT_ELEMENT > nav {
+  @apply mb-3
+}
+.PARENT_ELEMENT > nav > ul {
+  @apply flex flex-row justify-evenly w-72 items-center
+}
+.PARENT_ELEMENT > nav > ul > li {
+  @apply w-full
+}
+.activeLink{
+    @apply text-bright-orange border-b-2 border-bright-orange w-full  inline-block text-center
+}
+.Link{
+    @apply text-white border-b-2 border-transparent inline-block w-full text-center
+}
+.MAIN_SECTION {
+  @apply flex flex-col h-full
+}
+.inputElement{
+    @apply w-72 p-0 outline-none text-bright-blue bg-slate-800 py-2 pl-2 border-l-2 border-bright-blue border-solid
+    font-bold tracking-widest
+}
+.inputView{
+    @apply w-72 h-20 bg-transparent border-bright-blue border-2 border-solid my-auto text-bright-blue p-2  
+    break-normal overflow-y-auto overflow-x-hidden scrollbar-thin  scrollbar-thumb-bright-orange scrollbar-thumb-rounded
+}
+.inputView > h3 {
+  @apply break-all
+}
+.outputViewBorder{
+    @apply relative w-72 h-56 bg-bright-blue my-auto
+}
+.outputView{
+    @apply absolute inset-0.5 text-bright-blue p-2 bg-gray-dark
+    overflow-y-auto overflow-x-hidden pb-5 scrollbar-thin scrollbar-thumb-bright-orange scrollbar-thumb-rounded  scrollbar-w-1 text-2xl font-bold
+}
+.FOOTER_SECTION{
+  @apply mt-auto mb-3
+}
+.FOOTER_SECTION > p {
+  @apply text-white text-center
+}
+.FOOTER_SECTION > p > a{
+  @apply text-bright-orange link_style
+}
+a.link_style{
+  position: relative;
+}
+a.link_style::after{
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 3px;
+  background-color: #FF5F1F;
+  left: 0;
+  bottom: -2px;
+}
+.inputElement::placeholder{
+  color: #0096FF;
+  opacity: .8;
+}
+.outputViewBorder{
+  clip-path: polygon(100% 0, 100% 100%, 8% 100%, 0 86%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 8% 100%, 0 86%, 0 0);
+}
+.outputView{
+  clip-path: polygon(100% 0, 100% 100%, 8% 100%, 0 86%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 8% 100%, 0 86%, 0 0);
+}

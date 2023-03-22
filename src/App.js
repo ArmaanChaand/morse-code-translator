@@ -3,6 +3,7 @@ import Generate from "./components/Generate";
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import Decode from "./components/Decode";
 import NotFound from "./components/404";
+import "./App.css"
 function App() {
   const navigate = useNavigate()
   useEffect(()=>{
@@ -22,18 +23,18 @@ function App() {
 
   return (
    <div className="PARENT_ELEMENT">
-    <h1 className="text-center text-4xl leading-6 mt-5 mb-3">Morse Code <br /> <span className="text-xl">translator</span> </h1>
-    <nav className="mb-3">
-      <ul className="flex flex-row justify-evenly w-72 items-center">
-        <li className="w-full">
+    <h1 className="mainHeading">Morse Code <br /> <span>translator</span> </h1>
+    <nav>
+      <ul>
+        <li>
           <NavLink to="/generate" className={({isActive})=> isActive ? "activeLink" : "Link"}>Generate</NavLink>
         </li>
-        <li className="w-full">
+        <li>
           <NavLink to="/decode" className={({isActive})=> isActive ? "activeLink" : "Link"}>Decode</NavLink>
         </li>
       </ul>
     </nav>
-    <main className="flex flex-col h-full">
+    <main className="MAIN_SECTION">
       <Routes>
         <Route path="/generate/" element={
           <Generate 
@@ -58,8 +59,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
-    <footer className="mt-auto mb-3">
-      <p className="text-bright-blue text-center">This is a project <br/> developed by <a href="https://www.linkedin.com/in/armaanchaand/" target="_blank" className="text-bright-orange link_style">armaan</a></p>
+    <footer className="FOOTER_SECTION">
+      <p>This is a project <br/> developed by <a href="https://www.linkedin.com/in/armaanchaand/" target="_blank" className="link_style">armaan</a></p>
     </footer>
    </div>
   );

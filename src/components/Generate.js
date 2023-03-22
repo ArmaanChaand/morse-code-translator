@@ -44,7 +44,7 @@ function Generate({genText, setGenText,  morseCodeElement, setMorseCodeElement, 
                 {genText ? <h3 className="break-all ">{genText}</h3> : <h3>Your entered text will appear here.</h3>}
             </div>
             <div className="outputViewBorder">
-                <div className="outputView bg-[#121212]">
+                <div className="outputView">
                     {genText ? <h3>{morseCode}</h3> : <h3>Your Morse Code will appear here.</h3>}
                 </div>
             </div>

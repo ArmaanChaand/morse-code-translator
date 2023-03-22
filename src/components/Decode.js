@@ -35,10 +35,10 @@ function Decode({morseEntered, setMorseEntered, morseElement, setMorseElement, d
                 />
             </form>
             <div className="inputView">
-                {morseEntered ? <h3 className="break-all ">{morseEntered}</h3> : <h3>Your morse code will appear here.</h3>}
+                {morseEntered ? <h3>{morseEntered}</h3> : <h3>Your morse code will appear here.</h3>}
             </div>
             <div className="outputViewBorder">
-                <div className="outputView bg-[#121212]">
+                <div className="outputView">
                     {morseEntered ? <h3>{decodedText ? decodedText : <span className="text-red-900">Invalid Morse Code or Entered Wrongly</span>}</h3> : <h3>Decoded text will appear here.</h3>}
                 </div>
             </div>
